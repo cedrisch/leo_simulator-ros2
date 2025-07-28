@@ -94,6 +94,7 @@ def spawn_robot(context: LaunchContext, namespace: LaunchConfiguration):
             robot_ns + "/joint_states@sensor_msgs/msg/JointState[gz.msgs.Model",
             robot_ns + "/scan@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan",
             robot_ns + "/scan/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked",
+            "/world/leo_marsyard/pose/info@geometry_msgs/msg/PoseArray[ignition.msgs.Pose_V",
         ],
         parameters=[
             {
