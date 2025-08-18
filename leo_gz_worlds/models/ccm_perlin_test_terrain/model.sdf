@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-model href="http://sdformat.org/schemas/root.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<sdf version="1.7">
+  <model name="ccm_perlin_test_terrain">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+
+    <link name="ccm_perlin_terrain">
+
+      <collision name="terrain_collision">
+        <geometry>
+          <heightmap>
+            <uri>model://ccm_perlin_test_terrain/dem/heightmap.tiff</uri>
+            <pos>0 0 0</pos>
+            <size>50 50 4.820803273566</size>
+          </heightmap>
+        </geometry>
+      </collision>
+
+      <visual name="terrain_visual">
+        <geometry>
+          <heightmap>
+            <use_terrain_paging>false</use_terrain_paging>
+            <uri>model://ccm_perlin_test_terrain/dem/heightmap.tiff</uri>
+            <pos>0 0 0</pos>
+            <size>50 50 4.820803273566</size>
+            <texture>
+              <diffuse>model://ccm_perlin_test_terrain/dem/heightmap_colored.png</diffuse>
+              <normal>model://ccm_perlin_test_terrain/dem/flat_normal.png</normal>
+              <size>50</size>
+            </texture>
+          </heightmap>
+        </geometry>
+      </visual>
+
+    </link>
+
+  </model>
+</sdf>
